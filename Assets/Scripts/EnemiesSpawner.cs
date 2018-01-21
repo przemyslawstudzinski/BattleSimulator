@@ -28,7 +28,7 @@ public class EnemiesSpawner : MonoBehaviour {
         while (!stop)
         {
             randEnemy = Random.Range(0, 1);
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 1, Random.Range(spawnValues.z, spawnValues.z+20));
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, Random.Range(spawnValues.z, spawnValues.z+20));
 
             Instantiate(enemies[randEnemy], spawnPosition,gameObject.transform.rotation);
             yield return new WaitForSeconds(spawnWait);
