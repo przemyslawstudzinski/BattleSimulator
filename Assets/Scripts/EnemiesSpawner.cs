@@ -29,7 +29,7 @@ public class EnemiesSpawner : MonoBehaviour {
         {
             randEnemy = Random.Range(0, 1);
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, Random.Range(spawnValues.z, spawnValues.z+20));
-            enemies[randEnemy].transform.localScale += new Vector3(1, 1, 1);
+            enemies[randEnemy].transform.localScale = new Vector3(2, 2, 2);
             Instantiate(enemies[randEnemy], spawnPosition,gameObject.transform.rotation);
             yield return new WaitForSeconds(spawnWait);
         }
